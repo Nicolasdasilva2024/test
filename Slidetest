@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ideal Product Features</title>
+<style>
+       body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           background-color: #f4f4f4;
+           color: #333;
+       }
+       .container {
+           max-width: 1200px;
+           margin: 20px auto;
+           padding: 20px;
+           background-color: #fff;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       }
+       .header {
+           text-align: center;
+           padding: 20px;
+           background-color: #e40046;
+           color: white;
+       }
+       .header img {
+           width: 200px;
+       }
+       h1, h2, h3 {
+           color: #e40046;
+       }
+       .section {
+           margin: 20px 0;
+       }
+       .section h3 {
+           margin-bottom: 10px;
+       }
+       .section p {
+           margin: 10px 0;
+           line-height: 1.6;
+       }
+       .contact-info {
+           margin: 20px 0;
+           padding: 20px;
+           background-color: #f9f9f9;
+           border: 1px solid #ddd;
+       }
+       .contact-info h3 {
+           margin-bottom: 10px;
+       }
+       .contact-info p {
+           margin: 5px 0;
+       }
+       .contact-info a {
+           color: #e40046;
+           text-decoration: none;
+       }
+       .contact-info a:hover {
+           text-decoration: underline;
+       }
+       .form {
+           margin: 20px 0;
+       }
+       .form input, .form button {
+           width: 100%;
+           padding: 10px;
+           margin: 5px 0;
+           box-sizing: border-box;
+       }
+       .form button {
+           background-color: #e40046;
+           color: white;
+           border: none;
+           cursor: pointer;
+       }
+       .form button:hover {
+           background-color: #c2003c;
+       }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<img src="canada-life-logo.png" alt="Canada Life Logo">
+<h1>Ideal Product Features</h1>
+</div>
+<div class="section">
+<h3>Lead Generation</h3>
+<p>The companies use the applications not converted into sales as a lead generator where advisors reach out to those clients as qualified leads.</p>
+<p>After getting a quote and filling up the personal information form, but not completing the order, a "Non-commissioned" advisor will call you and ask you to make the decision to purchase the term insurance or not. They will send an email with more information including the Client Guide, Claims fact sheet, Mortgage Protection Insurance, Critical Illness Client Guide, and Critical Illness Product guide.</p>
+<p>Manulife on the other hand places a big "Call to Action" banner for users to call an advisor and offers a chat where customers can message Licensed Insurance Advisors.</p>
+</div>
+<div class="section">
+<h3>Ideal</h3>
+<p>Offering riders could increase our offering however since the purpose is to offer a simple and easy-to-understand product, riders can be left outside of the scope.</p>
+<p>But something extra, such as the Child Coverage, could be the differentiator and add perceived value to our product.</p>
+</div>
+<div class="contact-info">
+<h3>Need Assistance?</h3>
+<p>Call: 1-844-378-3877</p>
+<p>Monday - Friday, 8 a.m. to 8 p.m. ET</p>
+<p>Email: <a href="mailto:am.info@manulife.ca">am.info@manulife.ca</a></p>
+</div>
+<div class="form">
+<input type="text" placeholder="Contact Name">
+<input type="email" placeholder="Email">
+<input type="tel" placeholder="Phone">
+<button type="submit">Submit</button>
+</div>
+</div>
+</body>
+</html>
+has context menu
+
