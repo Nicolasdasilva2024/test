@@ -74,7 +74,7 @@
 <form id="quote-form">
 <div class="form-group">
 <label for="coverage-value">How much coverage do you want? We'll quote the nearest available amount.</label>
-<input type="number" id="coverage-value" name="coverage-value" min="5000" max="1000000" step="1000" value="400000">
+<input type="number" id="coverage-value" name="coverage-value" min="5000" max="5000000" step="1000" value="99999">
 </div>
 <div class="form-group">
 <label>Select the term length that's right for you.</label>
@@ -98,7 +98,7 @@
            const coverageValue = parseInt(this.value);
            const infoBox = document.getElementById('info-box');
            const infoMessage = document.getElementById('info-message');
-           if (coverageValue > 100000 && coverageValue <= 1000000) {
+           if (coverageValue > 99999 && coverageValue <= 1000000) {
                infoBox.style.display = 'block';
                infoMessage.textContent = 'Please note: You will be asked 3 questions for this coverage amount.';
            } else if (coverageValue > 1000000) {
