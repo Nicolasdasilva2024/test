@@ -1,86 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Wishes for Little One</title>
-   <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canada Life Insurance Quote</title>
+<style>
        body {
-           font-family: 'Arial, sans-serif';
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           height: 100vh;
+           font-family: Arial, sans-serif;
            margin: 0;
-           background-color: #f0f0f0;
+           padding: 0;
+           background-color: #f4f4f4;
        }
-       .book-cover {
-           background-color: white;
-           border: 1px solid #ccc;
-           width: 80%;
-           max-width: 600px;
+       .container {
+           max-width: 800px;
+           margin: 50px auto;
            padding: 20px;
-           box-shadow: 0 0 10px rgba(0,0,0,0.1);
-           position: relative;
+           background-color: #fff;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
        }
-       .star {
-           position: absolute;
-           top: 30px;
-           left: 50%;
-           transform: translateX(-50%);
-           width: 300px;
-           height: 300px;
-           background-color: #ffd700;
-           clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-           z-index: -1;
-       }
-       .title {
+       .header {
            text-align: center;
-           font-size: 2em;
-           margin-bottom: 20px;
-           color: #4caf50;
-       }
-       .subtitle {
-           text-align: center;
-           font-size: 1.5em;
-           margin-bottom: 40px;
-           color: #ff6347;
-       }
-       .elephants {
-           text-align: center;
-       }
-       .elephants img {
-           width: 200px;
-       }
-       .author {
-           text-align: center;
-           font-size: 1.2em;
-           margin-top: 20px;
-           color: #333;
-       }
-       .heart {
-           position: absolute;
-           top: 130px;
-           right: 10%;
-           background-color: #ff6347;
-           color: white;
            padding: 10px;
-           border-radius: 10px;
-           transform: rotate(-10deg);
-           font-size: 0.8em;
+           background-color: #e40046;
+           color: white;
        }
-   </style>
+       .header img {
+           width: 150px;
+       }
+       .quote-results {
+           text-align: center;
+           margin: 20px 0;
+       }
+       .form-group {
+           margin: 20px 0;
+       }
+       .form-group label {
+           display: block;
+           margin-bottom: 5px;
+       }
+       .form-group input, .form-group select {
+           width: 100%;
+           padding: 10px;
+           margin-bottom: 10px;
+       }
+       .info-box {
+           display: none;
+           padding: 10px;
+           background-color: #ffedcc;
+           border: 1px solid #ffcc00;
+           margin-top: 10px;
+       }
+       .button {
+           background-color: #e40046;
+           color: white;
+           padding: 10px 20px;
+           text-align: center;
+           display: inline-block;
+           cursor: pointer;
+           text-decoration: none;
+           margin-top: 20px;
+       }
+</style>
 </head>
 <body>
-   <div class="book-cover">
-       <div class="star"></div>
-       <div class="heart">Perfect for baby showers</div>
-       <div class="title">wishes</div>
-       <div class="subtitle">for little one</div>
-       <div class="elephants">
-           <img src="https://example.com/elephants.png" alt="Elephants holding heart">
-       </div>
-       <div class="author">by Sandra Magsamen</div>
-   </div>
+<div class="container">
+<div class="header">
+<img src="canada-life-logo.png" alt="Canada Life Logo">
+</div>
+<div class="quote-results">
+<h2>Your quick quote results are ready!</h2>
+<p>The price quoted is based on the information you provided.</p>
+</div>
+<form id="quote-form">
+<div class="form-group">
+<label for="coverage-value">How much coverage do you want? We'll quote the nearest available amount.</label>
+<input type="number" id="coverage-value" name="coverage-value" min="5000" max="1000000" step="1000" value="400000">
+</div>
+<div class="form-group">
+<label>Select the term length that's right for you.</label>
+<input type="radio" id="term-10" name="term-length" value="10" checked>
+<label for="term-10">10 years: Term Life</label>
+<input type="radio" id="term-20" name="term-length" value="20">
+<label for="term-20">20 years: Term Life</label>
+</div>
+<div class="form-group">
+<p>Your quoted coverage amount: <span id="quoted-amount">$400,000</span></p>
+<p>Cost per month: <span id="monthly-cost">$36.46</span> for the next <span id="term-length">10</span> years</p>
+</div>
+<div id="info-box" class="info-box">
+<p id="info-message"></p>
+</div>
+<a href="#" class="button">Continue with quote</a>
+</form>
+</div>
+<script>
+       document.getElementById('coverage-value').addEventListener('input', function() {
+           const coverageValue = parseInt(this.value);
+           const infoBox = document.getElementById('info-box');
+           const infoMessage = document.getElementById('info-message');
+           if (coverageValue > 100000 && coverageValue <= 1000000) {
+               infoBox.style.display = 'block';
+               infoMessage.textContent = 'Please note: You will be asked 3 questions for this coverage amount.';
+           } else if (coverageValue > 1000000) {
+               infoBox.style.display = 'block';
+               infoMessage.textContent = 'Please note: You will be asked 20 questions for this coverage amount.';
+           } else {
+               infoBox.style.display = 'none';
+               infoMessage.textContent = '';
+           }
+           document.getElementById('quoted-amount').textContent = `$${coverageValue.toLocaleString()}`;
+           // Update cost and term dynamically if needed
+       });
+       document.getElementById('quote-form').addEventListener('change', function() {
+           const termLength = document.querySelector('input[name="term-length"]:checked').value;
+           document.getElementById('term-length').textContent = termLength;
+           // Update cost dynamically based on term length if needed
+       });
+</script>
 </body>
 </html>
